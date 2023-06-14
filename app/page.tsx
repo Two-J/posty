@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <main>
-      <h1 className="text-sm font-bold text-blue-500">
+      <h1 className="text-sm font-bold text-blue-500 text-center capitalize">
         Hello everyone! You can create your post.
       </h1>
       <CreatePost />
@@ -33,6 +33,7 @@ export default function Home() {
           img={post.user.image}
           postTitle={post.title}
           id={post.id}
+          date={post.createdAt}
         />
       ))}
     </main>

@@ -8,13 +8,14 @@ interface Props {
   img: string;
   postTitle: string;
   id: string;
+  date: string;
   comments: [];
 }
 
-const Posts = ({ name, img, postTitle, id, comments }: Props) => {
+const Posts = ({ name, img, postTitle, id, comments, date }: Props) => {
   return (
     <div className=" bg-white my-8 p-8 rounded-lg">
-      <div className=" flex items-center gap-2">
+      <div className=" flex items-center gap-3">
         <Image
           width={30}
           height={30}
@@ -23,6 +24,7 @@ const Posts = ({ name, img, postTitle, id, comments }: Props) => {
           className="rounded-full"
         />
         <h3 className=" font-bold text-gray-700">{name}</h3>
+        <p className="text-gray-400">{date.slice(0, 10)} </p>
       </div>
       <div className=" my-8">
         <p className="breake-all">{postTitle}</p>

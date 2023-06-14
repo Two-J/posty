@@ -15,9 +15,6 @@ const Nav = async () => {
         <h1 className=" font-bold text-lg">Home</h1>
         <HiHome size={25} />
       </Link>
-      <h3 className="text-red-600">
-        {session?.user ? "" : "Please Sign In to Create your post!"}
-      </h3>
       <ul className=" flex items-center gap-6">
         {session?.user ? <Logout img={session.user.image || ""} /> : <SignIn />}
       </ul>
