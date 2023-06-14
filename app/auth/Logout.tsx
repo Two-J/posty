@@ -12,7 +12,7 @@ const Logout = ({ img }: User) => {
     <li className=" flex gap-8 item-center">
       <button
         onClick={() => signOut()}
-        className=" text-sm bg-gray-700 text-white px-8 py-5 rounded-xl disabled:opacity-25"
+        className=" text-sm font-bold bg-red-600 text-white px-5 py-2 rounded-xl disabled:opacity-25"
       >
         Sign Out
       </button>
@@ -22,7 +22,7 @@ const Logout = ({ img }: User) => {
           height={35}
           src={img}
           alt=""
-          className=" w-14 rounded-full
+          className=" rounded-full
         "
         />
       </Link>

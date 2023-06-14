@@ -1,19 +1,25 @@
 import Link from "next/link";
 import React from "react";
-import Login from "./Login";
 import { getServerSession } from "next-auth/next";
-import { authOptions } from "../lib/auth";
+import { authOptions } from "../../app/api/auth/[...nextauth]/route";
 import Logout from "./Logout";
+import { HiHome } from "react-icons/hi";
+import SignIn from "./signin/page";
 
 const Nav = async () => {
   const session = await getServerSession(authOptions);
+  console.log(session);
   return (
     <nav className=" flex justify-between py-4 items-center">
-      <Link href="/">
-        <h1 className=" font-bold text-lg">Send it.</h1>
+      <Link href="/" className="flex justify-between">
+        <h1 className=" font-bold text-lg">Home</h1>
+        <HiHome size={25} />
       </Link>
+      <h3 className="text-red-600">
+        {session?.user ? "" : "Please Sign In to Create your post!"}
+      </h3>
       <ul className=" flex items-center gap-6">
-        {session?.user ? <Logout img={session.user.image || ""} /> : <Login />}
+        {session?.user ? <Logout img={session.user.image || ""} /> : <SignIn />}
       </ul>
     </nav>
   );
