@@ -4,7 +4,7 @@ import { NextResponse, NextRequest } from "next/server";
 import { type User } from "@prisma/client";
 import { Request } from "express";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
     const data = await prisma.post.findMany({
       include: {
