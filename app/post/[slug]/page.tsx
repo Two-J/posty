@@ -35,6 +35,7 @@ const PostDetail = (url: URL) => {
             name={data?.user.name}
             img={data?.user.image}
             postTitle={data?.title}
+            //@ts-ignore
             comments={data?.comments}
           />
           <AddComments id={data?.id} />

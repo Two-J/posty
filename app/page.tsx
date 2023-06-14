@@ -27,6 +27,7 @@ export default function Home() {
       {data?.map((post) => (
         <Posts
           key={post.id}
+          //@ts-ignore
           comments={post.comments}
           name={post.user.name}
           img={post.user.image}

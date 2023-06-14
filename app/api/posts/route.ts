@@ -1,7 +1,6 @@
 import { getServerSession } from "next-auth/next";
 import { authOptions, prisma } from "../auth/[...nextauth]/route";
 import { NextResponse, NextRequest } from "next/server";
-import { NextApiRequest, NextApiResponse } from "next";
 import { type User } from "@prisma/client";
 import { Request } from "express";
 

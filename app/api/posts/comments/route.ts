@@ -23,6 +23,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
   }
   try {
     const data = await prisma.comments.create({
+      //@ts-ignore
       data: {
         message: title,
         userId: user?.id,
