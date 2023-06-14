@@ -23,9 +23,6 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt",
   },
   database: config.databaseUrl,
-  pages: {
-    signIn: "/auth/signin",
-  },
 };
 
 const handler = NextAuth(authOptions);
