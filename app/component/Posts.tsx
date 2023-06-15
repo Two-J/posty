@@ -24,7 +24,6 @@ const Posts = ({ name, img, postTitle, id, comments, date }: Props) => {
           className="rounded-full"
         />
         <h3 className=" font-bold text-gray-700">{name}</h3>
-        <p className="text-gray-400">{date.slice(0, 10)} </p>
       </div>
       <div className=" my-8">
         <p className="breake-all">{postTitle}</p>

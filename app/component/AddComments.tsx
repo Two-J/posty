@@ -47,7 +47,6 @@ const AddComments = ({ id }: Props) => {
 
   return (
     <form className="my-8" onSubmit={submitComment}>
-      <h3 className="font-bold">Comments</h3>
       <div className="flex flex-col my-2">
         <input
           type="text"
@@ -58,19 +57,19 @@ const AddComments = ({ id }: Props) => {
           className="p-4 text-lg rounded-md my-2"
         />
       </div>
-      <div className="flex items-center gap-2">
-        <button
-          className="text-sm bg-teal-600 text-white py-2 px-5 rounded-xl disabled:opacity-25"
-          disabled={isDisable}
-          type="submit"
-        >
-          Add comment
-        </button>
+      <div className="flex items-center justify-end gap-2">
         <p
           className={`font-bold text-sm ${
             title.length > 100 ? "text-red-700" : "text-gray-700"
           }`}
         >{`${title.length}/100`}</p>
+        <button
+          className="text-sm bg-teal-600 text-white py-2 md:px-5 sm:px-3 px-3 rounded-xl disabled:opacity-25"
+          disabled={isDisable}
+          type="submit"
+        >
+          Add comment
+        </button>
       </div>
     </form>
   );

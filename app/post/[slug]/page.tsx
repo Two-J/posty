@@ -39,6 +39,7 @@ const PostDetail = (url: URL) => {
             comments={data?.comments}
           />
           <AddComments id={data?.id} />
+          <h3 className="font-bold">Comments</h3>
           {data.comments.map((comment) => (
             <div key={comment.id} className="my-6 bg-white p-8 rounded-md">
               <div className="flex items-center gap-2">
@@ -50,9 +51,6 @@ const PostDetail = (url: URL) => {
                   className="rounded-full"
                 />
                 <h3 className="text-bold">{comment.user.name} </h3>
-                <h2 className="text-gray-400 text-sm">
-                  {comment.createdAt.slice(0, 10)}
-                </h2>
               </div>
               <div className="py-3 px-2 rounded-xl my-2 bg-gray-200">
                 {comment.message}
